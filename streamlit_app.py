@@ -9,8 +9,8 @@ classes = [x.split(' ')[1].replace('\n', '') for x in open('labels.txt', 'r').re
 model = load_model('keras_model.h5', compile = False)
 
 # Create the streamlit Title and camera_input
-st.title(f'Is it {classes[0]} or {classes[1]}!?')
-img_file_buffer = st.camera_input(f"Take a picture of {classes[0]} or {classes[1]}")
+st.title(f'근대건축유산 분류 플랫폼')
+img_file_buffer = st.camera_input(f"분류해보고 싶은 건축물의 외부사진을 찍어주세요")
 
 
 # Trigger when a photo has been taken and the bugger is no longer None
@@ -28,12 +28,12 @@ if img_file_buffer is not None:
     # Check if either probability is over 80%, if so print the message for that classes.
     if probabilities[0,0] > 0.8:
         prob = round(probabilities[0,0] * 100,2)
-        st.write(f"I'm {prob}% sure that's {classes[0]}!")
+        st.write(f"이 건물은 {prob}% 의 확률로 {classes[0]} 건축양식의 건물임이 확인되었습니다.")
     elif probabilities[0,1] > 0.8:
         prob = round(probabilities[0,1] * 100,2)
-        st.write(f"I'm {prob}% sure that's {classes[1]}!")
+        st.write(f"이 건물은 {prob}% 의 확률로 {classes[1]} 건축양식의 건물임이 확인되었습니다.")
     else:
-        st.write("I'm not confident that I know what this is! ")
+        st.write("죄송하지만, 건물의 양식을 파악할 수 없습니다.")
 
     # End on balloons
     st.balloons()
