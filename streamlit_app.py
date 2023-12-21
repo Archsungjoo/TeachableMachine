@@ -9,8 +9,7 @@ classes = [x.split(' ')[1].replace('\n', '') for x in open('labels.txt', 'r').re
 model = load_model('keras_model.h5', compile = False)
 
 # Create the streamlit Title and camera_input
-st.title(f'Architectural Heritage')
-st.subheader(':red[근대건축유산] 의 보존과 활용을 위해')
+st.title('Architectural Heritage')
 
 st.divider()
 st.subheader('왜 우리는 근대건축유산을 보존해야할까요?')
