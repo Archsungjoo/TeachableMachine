@@ -13,7 +13,7 @@ st.title(f'Architectural Heritage')
 st.subheader(':red[근대건축유산] 의 보존과 활용을 위해')
 
 st.divider()
-
+st.image('building.jpg', caption='사라져가는 우리의 유산들')
 st.subheader('왜 우리는 근대건축유산을 보존해야할까요?')
 st.caption('첫째, 문화적 가치를 유지하기 위해')
 st.caption('둘째, 역사적 중요성을 지니기 때문에')
@@ -42,12 +42,12 @@ if img_file_buffer is not None:
     # Check if either probability is over 80%, if so print the message for that classes.
     if probabilities[0,0] > 0.8:
         prob = round(probabilities[0,0] * 100,2)
-        st.write(f"이 건물은 {prob}% 의 확률로 {classes[0]} 건축양식의 건물임이 확인되었습니다.")
+        st.write(f"이 건물은 {prob}% 의 확률로 {classes[0]} 들이 지은 건축양식임이 확인되었습니다.")
     elif probabilities[0,1] > 0.8:
         prob = round(probabilities[0,1] * 100,2)
-        st.write(f"이 건물은 {prob}% 의 확률로 {classes[1]} 건축양식의 건물임이 확인되었습니다.")
+        st.write(f"이 건물은 {prob}% 의 확률로 {classes[1]} 들이 지은 건축양식임이 확인되었습니다.")
     else:
-        st.write("죄송하지만, 건물의 양식을 파악할 수 없습니다.")
+        st.write("죄송하지만, 건물의 양식을 파악할 수 없습니다. 다시 시도해주세요")
 
     # End on balloons
     st.balloons()
