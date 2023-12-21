@@ -10,8 +10,19 @@ model = load_model('keras_model.h5', compile = False)
 
 # Create the streamlit Title and camera_input
 st.title(f'Architectural Heritage')
-st.subheader(':red[근대건축유산] 의 보존과 활용을 위해 :four_leaf_clover:')
-img_file_buffer = st.camera_input(f"분류해보고 싶은 건축물의 외부사진을 찍어주세요")
+st.subheader(':red[근대건축유산] 의 보존과 활용을 위해')
+st.divider()
+
+st.subheader('왜 우리는 근대건축유산을 보존해야할까요?')
+st.caption('첫째, 문화적 가치를 유지하기 위해')
+st.caption('둘째, 역사적 중요성을 지니기 때문에')
+st.caption('셋째, 지역사회의 정체성을 형성하기 위해')
+st.caption('넷째, 지속가능한 발전과 활용을 위해')
+st.caption('셋째, 미래세대를 위한 유산을 전달하기 위해')
+
+st.divider()
+st.subheader('보존에 함께해요!')
+img_file_buffer = st.camera_input(f"평소 궁금하거나 분류해보고 싶은 건축물의 외부사진을 찍어주세요")
 
 
 # Trigger when a photo has been taken and the bugger is no longer None
