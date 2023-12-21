@@ -10,7 +10,7 @@ model = load_model('keras_model.h5', compile = False)
 
 # Create the streamlit Title and camera_input
 st.title(f'Architectural Heritage')
-st.title(':red[근대건축유산] 의 _보존_과_활용_을 위해 :four_leaf_clover:')
+st.subheader(':red[근대건축유산] 의 보존과 활용을 위해 :four_leaf_clover:')
 img_file_buffer = st.camera_input(f"분류해보고 싶은 건축물의 외부사진을 찍어주세요")
 
 
