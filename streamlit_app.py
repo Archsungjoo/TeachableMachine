@@ -13,7 +13,7 @@ st.title(f'Architectural Heritage')
 st.subheader(':red[근대건축유산] 의 보존과 활용을 위해')
 
 st.divider()
-st.image('building.jpg', caption='사라져가는 우리의 유산들')
+st.image('building.png', caption='사라져가는 우리의 유산들')
 st.subheader('왜 우리는 근대건축유산을 보존해야할까요?')
 st.caption('첫째, 문화적 가치를 유지하기 위해')
 st.caption('둘째, 역사적 중요성을 지니기 때문에')
